@@ -1,23 +1,25 @@
-# Analisador de Vendas com Pandas
+# Analisador de Vendas com Pandas e SQL
 
-Este é um programa simples em Python que utiliza a biblioteca **Pandas** para processar e analisar dados de vendas inseridos pelo usuário. Ele calcula o faturamento total e exibe estatísticas detalhadas por produto.
+Este é um programa simples em Python que utiliza a biblioteca **Pandas** e um banco de dados **SQL** para armazenar, processar e analisar dados de vendas inseridos pelo usuário. Ele calcula o faturamento total e exibe estatísticas detalhadas por produto.
 
 ## 📌 Funcionalidades
 - Permite a entrada manual de produtos, quantidades e preços.
+- Armazena os dados em um banco de dados SQL (compatível com MySQL, PostgreSQL, etc.).
 - Calcula o faturamento total e por produto.
 - Exibe estatísticas sobre as vendas.
 
 ## 🚀 Como Executar
 1. Certifique-se de ter o Python instalado em seu sistema.
-2. Instale a biblioteca Pandas caso ainda não tenha:
+2. Instale as bibliotecas necessárias caso ainda não tenha:
    ```sh
-   pip install pandas
+   pip install pandas sqlalchemy pymysql psycopg2
    ```
-3. Execute o script Python:
+3. Configure a conexão com o banco de dados SQL no arquivo `config.py`.
+4. Execute o script Python:
    ```sh
    python analise_vendas.py
    ```
-4. Insira os produtos vendidos e finalize digitando **'sair'**.
+5. Insira os produtos vendidos e finalize digitando **'sair'**.
 
 ## 📊 Exemplo de Uso
 ```
@@ -47,6 +49,7 @@ Name: Quantidade, dtype: int64
 ## 🛠 Tecnologias Utilizadas
 - **Python**
 - **Pandas**
+- **SQLAlchemy** (para conexão com bancos SQL como MySQL, PostgreSQL, etc.)
 
 ## 📄 Licença
 Este projeto está sob a licença MIT. Sinta-se à vontade para modificá-lo e usá-lo como quiser.
@@ -54,3 +57,4 @@ Este projeto está sob a licença MIT. Sinta-se à vontade para modificá-lo e u
 ---
 
 ✨ Desenvolvido por Filipe Marçal 🚀
+
