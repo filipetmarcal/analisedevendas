@@ -1,4 +1,9 @@
 import pandas as pd
+from sqlalchemy import create_engine
+
+# Configuração do banco de dados SQL (altere conforme necessário)
+DATABASE_URL = "mysql+pymysql://usuario:senha@localhost/banco"
+engine = create_engine(DATABASE_URL)
 
 # Lista para armazenar os dados
 produtos = []
@@ -24,6 +29,9 @@ df = pd.DataFrame(data)
 
 # Calcular o faturamento total por produto
 df['Faturamento'] = df['Quantidade'] * df['Preço_Unitario']
+
+# Enviar dados para o banco de dados
+df.to_sql('vendas', con=engine, if_exists='replace', index=False)
 
 # Estatísticas básicas
 faturamento_total = df['Faturamento'].sum()
